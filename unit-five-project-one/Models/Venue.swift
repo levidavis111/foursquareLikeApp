@@ -9,27 +9,31 @@
 import Foundation
 
 struct VenueWrapper: Codable {
-    let response: Venues
+    let response: Response
     
     static func getVenues(from jsonData: Data) throws -> [Venue]? {
        
             let response = try JSONDecoder().decode(VenueWrapper.self, from: jsonData)
-            return response.response.Venues
+        return response.response.venues
 
     }
 }
 
-struct Venues: Codable {
-    let Venues: [Venue]
+struct Response: Codable {
+    let venues: [Venue]
 }
 
 struct Venue: Codable {
     let id: String
     let name: String
-    let crossStreet: String
+    let location: LocationWrapper
+    
+}
+
+struct LocationWrapper: Codable {
     let lat: Double
     let lng: Double
-    let distance: Int
+    let crossStreet: String?
+    let distance: Int?
     let formattedAddress: [String]
-    
 }
