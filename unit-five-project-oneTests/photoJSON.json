@@ -1,0 +1,43 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5dc3459ae826ac001b0488a1"
+    },
+    "response": {
+        "photos": {
+            "count": 1,
+            "items": [
+                {
+                    "id": "513bd223e4b0e8ef8292ee54",
+                    "createdAt": 1362874915,
+                    "source": {
+                        "name": "Instagram",
+                        "url": "http://instagram.com"
+                    },
+                    "prefix": "https://fastly.4sqi.net/img/general/",
+                    "suffix": "/655018_Zp3vA90Sy4IIDApvfAo5KnDItoV0uEDZeST7bWT-qzk.jpg",
+                    "width": 612,
+                    "height": 612,
+                    "user": {
+                        "id": "655018",
+                        "firstName": "benjamin",
+                        "lastName": "bannister",
+                        "gender": "male",
+                        "photo": {
+                            "prefix": "https://fastly.4sqi.net/img/user/",
+                            "suffix": "/655018-SOLGBBXDKHVPRIPM.jpg"
+                        }
+                    },
+                    "checkin": {
+                        "id": "513bd221e4b0fce93e147272",
+                        "createdAt": 1362874913,
+                        "type": "checkin",
+                        "timeZoneOffset": -300
+                    },
+                    "visibility": "public"
+                }
+            ],
+            "dupesRemoved": 0
+        }
+    }
+}

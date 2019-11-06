@@ -25,5 +25,21 @@ class unit_five_project_oneTests: XCTestCase {
             print(error)
         }
     }
+    
+    func testPhotoDataFromJSON() {
+        let testBundle = Bundle(for: type(of: self))
+        guard let path = testBundle.path(forResource: "photoJSON", ofType: "json") else {XCTFail(); return}
+        
+        let urlFromFile = URL(fileURLWithPath: path)
+        
+        do {
+            let data = try Data(contentsOf: urlFromFile)
+            guard let photoData = try PhotoWrapper.getImages(from: data) else {XCTFail(); return}
+            XCTAssert(photoData.count > 0)
+        } catch {
+            XCTFail()
+            print(error)
+        }
+    }
 
 }

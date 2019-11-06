@@ -19,6 +19,8 @@
 		FCC5ECC92373738B00F5EEF7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ECC82373738B00F5EEF7 /* NetworkManager.swift */; };
 		FCC5ECCB237373BC00F5EEF7 /* VenueAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ECCA237373BC00F5EEF7 /* VenueAPIClient.swift */; };
 		FCC5ECCF237373D700F5EEF7 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ECCE237373D700F5EEF7 /* AppError.swift */; };
+		FCC5ECD123737D9D00F5EEF7 /* photoJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = FCC5ECD023737D9D00F5EEF7 /* photoJSON.json */; };
+		FCC5ECD323737DBC00F5EEF7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ECD223737DBC00F5EEF7 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		FCC5ECC82373738B00F5EEF7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FCC5ECCA237373BC00F5EEF7 /* VenueAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueAPIClient.swift; sourceTree = "<group>"; };
 		FCC5ECCE237373D700F5EEF7 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		FCC5ECD023737D9D00F5EEF7 /* photoJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photoJSON.json; sourceTree = "<group>"; };
+		FCC5ECD223737DBC00F5EEF7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				FCC5ECC3237371E800F5EEF7 /* venueJSON.json */,
+				FCC5ECD023737D9D00F5EEF7 /* photoJSON.json */,
 				FCC5ECAD2373693300F5EEF7 /* unit_five_project_oneTests.swift */,
 				FCC5ECAF2373693300F5EEF7 /* Info.plist */,
 			);
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				FCC5ECC52373720C00F5EEF7 /* Venue.swift */,
+				FCC5ECD223737DBC00F5EEF7 /* Photo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC5ECD123737D9D00F5EEF7 /* photoJSON.json in Resources */,
 				FCC5ECC4237371E800F5EEF7 /* venueJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +265,7 @@
 				FCC5ECCB237373BC00F5EEF7 /* VenueAPIClient.swift in Sources */,
 				FCC5ECC92373738B00F5EEF7 /* NetworkManager.swift in Sources */,
 				FCC5EC972373692F00F5EEF7 /* AppDelegate.swift in Sources */,
+				FCC5ECD323737DBC00F5EEF7 /* Photo.swift in Sources */,
 				FCC5ECC62373720C00F5EEF7 /* Venue.swift in Sources */,
 				FCC5ECCF237373D700F5EEF7 /* AppError.swift in Sources */,
 				FCC5ECC023736CE300F5EEF7 /* Secret.swift in Sources */,
