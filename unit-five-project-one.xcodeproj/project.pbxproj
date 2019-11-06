@@ -22,6 +22,7 @@
 		FCC5ECD123737D9D00F5EEF7 /* photoJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = FCC5ECD023737D9D00F5EEF7 /* photoJSON.json */; };
 		FCC5ECD323737DBC00F5EEF7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ECD223737DBC00F5EEF7 /* Photo.swift */; };
 		FCC5ECD52373817600F5EEF7 /* PhotoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ECD42373817600F5EEF7 /* PhotoAPIClient.swift */; };
+		FCC5ECD7237384FD00F5EEF7 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ECD6237384FD00F5EEF7 /* ImageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		FCC5ECD023737D9D00F5EEF7 /* photoJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photoJSON.json; sourceTree = "<group>"; };
 		FCC5ECD223737DBC00F5EEF7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FCC5ECD42373817600F5EEF7 /* PhotoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIClient.swift; sourceTree = "<group>"; };
+		FCC5ECD6237384FD00F5EEF7 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				FCC5ECCE237373D700F5EEF7 /* AppError.swift */,
 				FCC5ECCA237373BC00F5EEF7 /* VenueAPIClient.swift */,
 				FCC5ECD42373817600F5EEF7 /* PhotoAPIClient.swift */,
+				FCC5ECD6237384FD00F5EEF7 /* ImageHelper.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				FCC5ECC023736CE300F5EEF7 /* Secret.swift in Sources */,
 				FCC5ECBB23736B9700F5EEF7 /* MapViewController.swift in Sources */,
 				FCC5EC992373692F00F5EEF7 /* SceneDelegate.swift in Sources */,
+				FCC5ECD7237384FD00F5EEF7 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
