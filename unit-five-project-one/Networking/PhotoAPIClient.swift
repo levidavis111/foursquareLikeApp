@@ -11,7 +11,11 @@ struct PhotoAPIClient {
     
     static let manager = PhotoAPIClient()
     
-    func getCategory(completionHandler: @escaping (Result<[Item], AppError>) -> () ) {
+    func getPhotos(id: String, completionHandler: @escaping (Result<[Item], AppError>) -> () ) {
+        var imagesURL: URL {
+               guard let url = URL(string: "https://api.foursquare.com/v2/venues/\(id)/photos?client_id=\(Secret.clientID)&client_secret=\(Secret.clientSecret)&v=20191104&limit=3") else {fatalError("Error: Invalid URL")}
+               return url
+           }
         
         NetworkManager.manager.performDataTask(withUrl: imagesURL, httpMethod: .get) { (result) in
             switch result {
@@ -31,10 +35,7 @@ struct PhotoAPIClient {
         }
         
     }
-    var imagesURL: URL {
-        guard let url = URL(string: "https://api.foursquare.com/v2/venues/412d2800f964a520df0c1fe3/photos?client_id=\(Secret.clientID)&client_secret=\(Secret.clientSecret)&v=20191104") else {fatalError("Error: Invalid URL")}
-        return url
-    }
+   
     
     private init() {}
     

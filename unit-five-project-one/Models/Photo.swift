@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import MapKit
+import CoreLocation
 
 struct PhotoWrapper: Codable {
     let response: ResponseWrapper

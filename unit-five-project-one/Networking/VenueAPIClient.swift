@@ -12,7 +12,12 @@ struct VenueAPIClient {
     
     static let manager = VenueAPIClient()
     
-    func getVenue(completionHandler: @escaping (Result<[Venue], AppError>) -> () ) {
+    func getVenue(lat: Double, long: Double, venue: String, completionHandler: @escaping (Result<[Venue], AppError>) -> () ) {
+        let formattedVenue = venue.replacingOccurrences(of: " ", with: "")
+        var venueURL: URL {
+            guard let url = URL(string: "https://api.foursquare.com/v2/venues/search?ll=\(lat),\(long)&client_id=\(Secret.clientID)&client_secret=\(Secret.clientSecret)&v=20191104&query=\(formattedVenue)&limit=3") else {fatalError("Error: Invalid URL")}
+            return url
+        }
         
         NetworkManager.manager.performDataTask(withUrl: venueURL, httpMethod: .get) { (result) in
             switch result {
@@ -32,10 +37,7 @@ struct VenueAPIClient {
         }
         
     }
-    var venueURL: URL {
-        guard let url = URL(string: "https://api.foursquare.com/v2/venues/search?ll=40.7,-74&client_id=\(Secret.clientID)&client_secret=\(Secret.clientSecret)&v=20191104&query=centralpark&limit=1000") else {fatalError("Error: Invalid URL")}
-        return url
-    }
+    
     
     private init() {}
     

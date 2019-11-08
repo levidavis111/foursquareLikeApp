@@ -23,6 +23,9 @@
 		FCC5ECD323737DBC00F5EEF7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ECD223737DBC00F5EEF7 /* Photo.swift */; };
 		FCC5ECD52373817600F5EEF7 /* PhotoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ECD42373817600F5EEF7 /* PhotoAPIClient.swift */; };
 		FCC5ECD7237384FD00F5EEF7 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ECD6237384FD00F5EEF7 /* ImageHelper.swift */; };
+		FCC5ED1523749AFA00F5EEF7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ED1423749AFA00F5EEF7 /* LocationManager.swift */; };
+		FCC5ED172374D37100F5EEF7 /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ED162374D37100F5EEF7 /* ReuseIdentifier.swift */; };
+		FCC5ED1A2374D3BA00F5EEF7 /* MapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5ED192374D3BA00F5EEF7 /* MapCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		FCC5ECD223737DBC00F5EEF7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FCC5ECD42373817600F5EEF7 /* PhotoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIClient.swift; sourceTree = "<group>"; };
 		FCC5ECD6237384FD00F5EEF7 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		FCC5ED1423749AFA00F5EEF7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FCC5ED162374D37100F5EEF7 /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
+		FCC5ED192374D3BA00F5EEF7 /* MapCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,10 @@
 		FCC5EC952373692F00F5EEF7 /* unit-five-project-one */ = {
 			isa = PBXGroup;
 			children = (
-				FCC5ECC72373737A00F5EEF7 /* Networking */,
-				FCC5ECC123736CFA00F5EEF7 /* Models */,
 				FCC5ECB92373698400F5EEF7 /* Controllers */,
+				FCC5ED182374D3A000F5EEF7 /* Views */,
+				FCC5ECC123736CFA00F5EEF7 /* Models */,
+				FCC5ECC72373737A00F5EEF7 /* Networking */,
 				FCC5ECBC23736CBB00F5EEF7 /* Secret */,
 				FCC5ECB82373696C00F5EEF7 /* SupportingFiles */,
 				FCC5ECA42373693200F5EEF7 /* Info.plist */,
@@ -125,6 +132,7 @@
 				FCC5EC982373692F00F5EEF7 /* SceneDelegate.swift */,
 				FCC5EC9F2373693200F5EEF7 /* Assets.xcassets */,
 				FCC5ECA12373693200F5EEF7 /* LaunchScreen.storyboard */,
+				FCC5ED162374D37100F5EEF7 /* ReuseIdentifier.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 			children = (
 				FCC5ECC52373720C00F5EEF7 /* Venue.swift */,
 				FCC5ECD223737DBC00F5EEF7 /* Photo.swift */,
+				FCC5ED1423749AFA00F5EEF7 /* LocationManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,6 +173,14 @@
 				FCC5ECD6237384FD00F5EEF7 /* ImageHelper.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		FCC5ED182374D3A000F5EEF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCC5ED192374D3BA00F5EEF7 /* MapCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +292,10 @@
 				FCC5ECD323737DBC00F5EEF7 /* Photo.swift in Sources */,
 				FCC5ECC62373720C00F5EEF7 /* Venue.swift in Sources */,
 				FCC5ECCF237373D700F5EEF7 /* AppError.swift in Sources */,
+				FCC5ED1A2374D3BA00F5EEF7 /* MapCollectionViewCell.swift in Sources */,
 				FCC5ECC023736CE300F5EEF7 /* Secret.swift in Sources */,
+				FCC5ED172374D37100F5EEF7 /* ReuseIdentifier.swift in Sources */,
+				FCC5ED1523749AFA00F5EEF7 /* LocationManager.swift in Sources */,
 				FCC5ECBB23736B9700F5EEF7 /* MapViewController.swift in Sources */,
 				FCC5EC992373692F00F5EEF7 /* SceneDelegate.swift in Sources */,
 				FCC5ECD7237384FD00F5EEF7 /* ImageHelper.swift in Sources */,
