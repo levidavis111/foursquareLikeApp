@@ -17,7 +17,7 @@ class MapCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.contentView.backgroundColor = .white
+        self.contentView.backgroundColor = .clear
         self.contentView.addSubview(imageView)
         setConstraints()
     }

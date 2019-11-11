@@ -84,7 +84,6 @@ class MapViewController: UIViewController {
         locationAuthorization()
         addSubviews()
         constrainSubviews()
-        loadVenueData()
     }
     
     private func setupDelegates() {
@@ -104,6 +103,7 @@ class MapViewController: UIViewController {
                 print(error)
             case .success(let venues):
                 self.venues = venues
+                print(venues)
                 self.collectionView.reloadData()
 
                 DispatchQueue.main.async {
@@ -118,12 +118,6 @@ class MapViewController: UIViewController {
         }
     }
     
-    private func centerViewOnUserLocation() {
-        if let location = locationManager.location?.coordinate {
-            let coordinateRegion = MKCoordinateRegion.init(center: initialLocation.coordinate, latitudinalMeters: searchRadius * 2.0, longitudinalMeters: searchRadius * 2.0)
-               mapView.setRegion(coordinateRegion, animated: true)
-        }
-    }
     
     private func loadPhotoData(id: String) {
         PhotoAPIClient.manager.getPhotos(id: id) { (result) in
@@ -132,10 +126,17 @@ class MapViewController: UIViewController {
                 print(error)
             case .success(let photos):
                 self.photos = photos
-                print(photos)
+                print("photos loaded")
             }
         }
     }
+    
+    private func centerViewOnUserLocation() {
+           if let location = locationManager.location?.coordinate {
+               let coordinateRegion = MKCoordinateRegion.init(center: initialLocation.coordinate, latitudinalMeters: searchRadius * 2.0, longitudinalMeters: searchRadius * 2.0)
+                  mapView.setRegion(coordinateRegion, animated: true)
+           }
+       }
     
     private func locationAuthorization() {
         let status = CLLocationManager.authorizationStatus()
@@ -230,7 +231,9 @@ extension MapViewController: UISearchBarDelegate {
         case venueSearchBar:
             print(searchBar.text ?? "Nothing")
         case locationSearchBar:
-            print("hi")
+            self.venue = venueSearchBar.text ?? ""
+            
+//            print("hi")
             let searchRequest = MKLocalSearch.Request()
             searchRequest.naturalLanguageQuery = locationSearchBar.text
             let activeSearch = MKLocalSearch(request: searchRequest)
@@ -243,12 +246,16 @@ extension MapViewController: UISearchBarDelegate {
                     self.lat = response.boundingRegion.center.latitude
                     self.long = response.boundingRegion.center.longitude
                     
+                    
+                    
                     let newAnnotation = MKPointAnnotation()
                     newAnnotation.title = self.locationSearchBar.text
                     newAnnotation.coordinate = CLLocationCoordinate2D(latitude: self.lat, longitude: self.long)
                     self.mapView.addAnnotation(newAnnotation)
                     let coordinateRegion = MKCoordinateRegion.init(center: newAnnotation.coordinate, latitudinalMeters: self.searchRadius * 2.0, longitudinalMeters: self.searchRadius * 2.0)
                     self.mapView.setRegion(coordinateRegion, animated: true)
+                    self.loadVenueData()
+
                 } else {
                     print(error)
                 }
@@ -267,7 +274,7 @@ extension MapViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.mapCollectionViewCell.rawValue, for: indexPath) as? MapCollectionViewCell else {return UICollectionViewCell()}
         
-        cell.backgroundColor = .white
+        cell.backgroundColor = .clear
         return cell
     }
     
